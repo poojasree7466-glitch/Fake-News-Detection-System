@@ -60,7 +60,8 @@ The following initial checks were systematically executed:
 df.info()
 df.describe()
 df.isnull().sum()
-📈 Distribution Analysis
+```
+###📈 Distribution Analysis
 Histograms and kernel density plots were plotted for text metrics, specifically measuring total word counts and string character distributions across the real and fake categories.
 📦 Box Plot Analysis
 Box plots were used to compare total string lengths between real and fake documents to capture underlying structural signals:
