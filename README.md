@@ -62,17 +62,22 @@ df.describe()
 df.isnull().sum()
 ```
 ###📈 Distribution Analysis
+
 Histograms and kernel density plots were plotted for text metrics, specifically measuring total word counts and string character distributions across the real and fake categories.
 📦 Box Plot Analysis
+
 Box plots were used to compare total string lengths between real and fake documents to capture underlying structural signals:
 Insights: Fake news content frequently exhibits a vastly wider variance in character lengths, showcasing either heavily bloated or extremely short paragraph patterns compared to real journalistic standards.
 📊 Count Plot Analysis
+
 Categorical variables were analyzed using count plots to assess thematic distributions:
 Features Analyzed: Subject vs. Target Class
 Insights: Disinformation patterns correlate strongly with specific structural category tags, emphasizing hyper-partisan political topics over highly standardized international wires.
 🧹 Step 2: Data Cleaning & Preprocessing
+
 Proper lexical cleaning is vital to avoid injecting structural noise into the high-dimensional feature matrix.
 🔤 String Normalization & Symbol Removal
+
 All non-alphabetic elements (numbers, punctuation marks, emojis) are systematically stripped out using customized regex pipelines.
 cleaned_content = re.sub('[^a-zA-Z]', ' ', content).lower()
 Stopwords Elimination
