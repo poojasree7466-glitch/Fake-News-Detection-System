@@ -61,14 +61,14 @@ df.info()
 df.describe()
 df.isnull().sum()
 ```
-**###📈 Distribution Analysis**
+**##📈 Distribution Analysis**
 
 Histograms and kernel density plots were plotted for text metrics, specifically measuring total word counts and string character distributions across the real and fake categories.
-**###📦 Box Plot Analysis**
+**##📦 Box Plot Analysis**
 
 Box plots were used to compare total string lengths between real and fake documents to capture underlying structural signals:
 Insights: Fake news content frequently exhibits a vastly wider variance in character lengths, showcasing either heavily bloated or extremely short paragraph patterns compared to real journalistic standards.
-**###📊 Count Plot Analysis**
+**##📊 Count Plot Analysis**
 
 Categorical variables were analyzed using count plots to assess thematic distributions:
 Features Analyzed: Subject vs. Target Class
@@ -85,21 +85,27 @@ cleaned_content = re.sub('[^a-zA-Z]', ' ', content).lower()
 Stopwords Elimination
 High-frequency syntactic filler words (such as 'the', 'is', 'on', 'which') are stripped utilizing the standard NLTK dictionary baseline.
 **##🪵 Porter Stemming Normalization**
+
 Words are chopped back down to their linguistic core root tokens (e.g., "analyzing", "analyzed", "analyzes" all compress uniformly to "analyz").
-⚙️ Step 3: Feature Engineering & Vectorization
+
+**##⚙️ Step 3: Feature Engineering & Vectorization**
 
 **##🔢 TF-IDF Vectorization**
+
 Text arrays are mapped into structural numerical matrices using Term Frequency-Inverse Document Frequency matrix metrics, capturing term importance while depressing globally repetitive words.
 
 **##✂️ Step 4: Train-Test Split**
+
 The feature matrix was split dynamically to ensure unbiased cross-evaluation profiles:
 80% Training Matrix: Used exclusively for structural weight learning.
 20% Testing Matrix: Kept isolated to validate true production performance.
 
 **##🧠 Step 5: Machine Learning Training & Optimization**
+
 A fine-tuned Logistic Regression classifier was trained over the high-dimensional text vectors. Given the sparse nature of text arrays, it provides stable probability boundaries without overfitting risk.
 
 **##🛠️ Technologies Used**
+
 Category                       Tools/Libraries
 Programming Language           Python
 Data Processing                Pandas, NumPy
@@ -110,5 +116,6 @@ Web UI Engine                  Streamlit
 
 
 **##👩‍💻 Author**
+
 Poojasri Kasani
 If you found this project configuration helpful, feel free to ⭐ the repository!
