@@ -4,7 +4,7 @@
 
 ---
 
-## 📌 Project Overview
+**## 📌 Project Overview**
 The proliferation of misinformation across digital media platforms has made content verification an essential challenge. Distinguishing between authentic journalism and fabricated narratives manually is highly resource-intensive, making automated linguistic analysis an essential modern solution.
 
 This project combines **Supervised Machine Learning** and **Advanced Text Mining** techniques to:
@@ -14,7 +14,7 @@ This project combines **Supervised Machine Learning** and **Advanced Text Mining
 
 ---
 
-## 🎯 Objectives
+**## 🎯 Objectives**
 The primary objectives of this project are:
 * Perform comprehensive **Exploratory Data Analysis (EDA)** on textual structures.
 * Clean and preprocess raw unformatted text corpora using tokenization frameworks.
@@ -25,7 +25,7 @@ The primary objectives of this project are:
 
 ---
 
-## 📂 Dataset
+**## 📂 Dataset**
 The system operates on structural news corpora comprising two distinct collection matrices:
 * `True.csv`: Contains verified articles from official trusted news agencies.
 * `Fake.csv`: Contains flagged misinformation and unverified digital content.
@@ -47,7 +47,7 @@ Raw Dataset | ▼ Exploratory Data Analysis | ▼ Data Cleaning | ▼ Feature En
 
 Before building the model, extensive exploratory data analysis was performed to understand document structure, class imbalances, and text patterns.
 
-### 📊 Data Inspection
+**### 📊 Data Inspection**
 The following initial checks were systematically executed:
 * Dataset structural shape and dimension metrics.
 * Feature data types profiling.
@@ -61,40 +61,40 @@ df.info()
 df.describe()
 df.isnull().sum()
 ```
-###📈 Distribution Analysis
+**###📈 Distribution Analysis**
 
 Histograms and kernel density plots were plotted for text metrics, specifically measuring total word counts and string character distributions across the real and fake categories.
-📦 Box Plot Analysis
+**📦 Box Plot Analysis**
 
 Box plots were used to compare total string lengths between real and fake documents to capture underlying structural signals:
 Insights: Fake news content frequently exhibits a vastly wider variance in character lengths, showcasing either heavily bloated or extremely short paragraph patterns compared to real journalistic standards.
-📊 Count Plot Analysis
+**📊 Count Plot Analysis**
 
 Categorical variables were analyzed using count plots to assess thematic distributions:
 Features Analyzed: Subject vs. Target Class
 Insights: Disinformation patterns correlate strongly with specific structural category tags, emphasizing hyper-partisan political topics over highly standardized international wires.
-🧹 Step 2: Data Cleaning & Preprocessing
+**🧹 Step 2: Data Cleaning & Preprocessing**
 
 Proper lexical cleaning is vital to avoid injecting structural noise into the high-dimensional feature matrix.
-🔤 String Normalization & Symbol Removal
+**🔤 String Normalization & Symbol Removal**
 
 All non-alphabetic elements (numbers, punctuation marks, emojis) are systematically stripped out using customized regex pipelines.
 cleaned_content = re.sub('[^a-zA-Z]', ' ', content).lower()
 Stopwords Elimination
 High-frequency syntactic filler words (such as 'the', 'is', 'on', 'which') are stripped utilizing the standard NLTK dictionary baseline.
-🪵 Porter Stemming Normalization
+**🪵 Porter Stemming Normalization**
 Words are chopped back down to their linguistic core root tokens (e.g., "analyzing", "analyzed", "analyzes" all compress uniformly to "analyz").
 ⚙️ Step 3: Feature Engineering & Vectorization
-🔢 TF-IDF Vectorization
+**🔢 TF-IDF Vectorization**
 Text arrays are mapped into structural numerical matrices using Term Frequency-Inverse Document Frequency matrix metrics, capturing term importance while depressing globally repetitive words.
-✂️ Step 4: Train-Test Split
+**✂️ Step 4: Train-Test Split**
 The feature matrix was split dynamically to ensure unbiased cross-evaluation profiles:
 80% Training Matrix: Used exclusively for structural weight learning.
 20% Testing Matrix: Kept isolated to validate true production performance.
-🧠 Step 5: Machine Learning Training & Optimization
+**🧠 Step 5: Machine Learning Training & Optimization**
 A fine-tuned Logistic Regression classifier was trained over the high-dimensional text vectors. Given the sparse nature of text arrays, it provides stable probability boundaries without overfitting risk.
 
-🛠️ Technologies Used
+**🛠️ Technologies Used**
 Category                       Tools/Libraries
 Programming Language           Python
 Data Processing                Pandas, NumPy
@@ -104,6 +104,6 @@ Model Deployed                 Logistic Regression
 Web UI Engine                  Streamlit
 
 
-👩‍💻 Author
+**👩‍💻 Author**
 Poojasri Kasani
 If you found this project configuration helpful, feel free to ⭐ the repository!
