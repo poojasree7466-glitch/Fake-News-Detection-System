@@ -5,6 +5,7 @@
 ---
 
 **## 📌 Project Overview**
+
 The proliferation of misinformation across digital media platforms has made content verification an essential challenge. Distinguishing between authentic journalism and fabricated narratives manually is highly resource-intensive, making automated linguistic analysis an essential modern solution.
 
 This project combines **Supervised Machine Learning** and **Advanced Text Mining** techniques to:
@@ -15,6 +16,7 @@ This project combines **Supervised Machine Learning** and **Advanced Text Mining
 ---
 
 **## 🎯 Objectives**
+
 The primary objectives of this project are:
 * Perform comprehensive **Exploratory Data Analysis (EDA)** on textual structures.
 * Clean and preprocess raw unformatted text corpora using tokenization frameworks.
@@ -26,6 +28,7 @@ The primary objectives of this project are:
 ---
 
 **## 📂 Dataset**
+
 The system operates on structural news corpora comprising two distinct collection matrices:
 * `True.csv`: Contains verified articles from official trusted news agencies.
 * `Fake.csv`: Contains flagged misinformation and unverified digital content.
@@ -39,6 +42,7 @@ The text fields analyzed include:
 ---
 
 ## 📚 Project Workflow
+
 Raw Dataset | ▼ Exploratory Data Analysis | ▼ Data Cleaning | ▼ Feature Engineering | ▼ Text Stemming & Normalization | ▼ Train-Test Split | ▼ Logistic Regression Model | ▼ Performance Evaluation | ▼ Model Serialization | ▼ Streamlit Web UI Deployment
 
 ---
