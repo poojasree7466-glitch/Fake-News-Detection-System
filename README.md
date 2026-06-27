@@ -47,7 +47,7 @@ Raw Dataset | ▼ Exploratory Data Analysis | ▼ Data Cleaning | ▼ Feature En
 
 ---
 
-## 🔍 Step 1: Exploratory Data Analysis (EDA)
+## **🔍 Step 1: Exploratory Data Analysis (EDA)**
 
 Before building the model, extensive exploratory data analysis was performed to understand document structure, class imbalances, and text patterns.
 
